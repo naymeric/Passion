@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En parcourant le monde...</title>
+    <link rel="stylesheet" href="assets/CSS/style1.css">
+</head>
+
+<body id="accueil">
+
+    <!-- Barre de navigation -->
+
+    <div class="navBar-container">
+        <div class="navBarLeft">
+            <img src="./assets/Images/Logo-parcourant2.png" alt="logo du site " en parcourant le monde">
+        </div>
+        <nav class="navBarRight">
+            <ul class="navList">
+                <li class="boutonLigne"><a href="#">Accueil</a></li>
+
+                <!-- ATTENTION : on ne ferme pas le li car elle doit englober la sous liste-->
+                <li class="boutonLigne"><a href="#destinations">Destinations &darr;</a>
+                    <ul class="boutonColonne">
+                        <li><a href="index2.html#ecosse">Ecosse</a></li>
+                        <li><a href="#">Norvège</a></li>
+                        <li><a href="#">Croatie</a></li>
+                    </ul>
+                    <!-- ATTENTION : on ferme le li de l'item contenant la sous liste-->
+                </li>
+                <li class="boutonLigne"><a href="#connaitre">Mieux me connaître</a></li>
+                <li class="boutonLigne"><a href="#footer">Me contacter</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <header>
+        <div class="backgroundImage"></div>
+        <div class="textHeader">
+            <h1 class="titleHeader">En parcourant le monde...</h1>
+            <br>
+            <h2>Mon blog de voyage</h2>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- MIEUX ME CONNAITRE-->
+
+        <section class="me-container">
+            <article class="me">
+                <h2 id="connaitre">Mieux me connaître...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla fugit iste quia accusantium. Quas ea
+                    enim
+                    molestias labore ut. Quod minima porro nam deleniti voluptatem sint facilis suscipit alias totam.
+                </p>
+                <div class="earth">
+                    <img src="./assets/Images/Earth_tranparent.png" alt="logo d'une planète">
+                </div>
+            </article>
+        </section>
+
+
+        <!-- DESTINATIONS-->
+
+        <section class="destinations-container">
+            <h2 id="destinations">Destinations</h2>
+            <div class="destArt-container">
+                <article class="ecosse">
+                    <h3><a href="index2.html#ecosse">Ecosse</a></h3>
+                    <p>Un road trip de 3 semaines dans les highland</p>
+                </article>
+                <article class="norvege">
+                    <h3><a href="#">Norvege</a></h3>
+                    <p>Un road trip de 4 semaines dans les fjords</p>
+                </article>
+                <article class="croatie">
+                    <h3><a href="#">Croatie</a></h3>
+                    <p>Un road trip de 3 semaines en terre croate</p>
+                </article>
+            </div>
+            <div class="earth">
+                <img src="./assets/Images/Earth_tranparent.png" alt="logo d'une planète">
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="footer">
+        <div class="contactFooter">
+            <article class="mail-container">
+                <div>
+                    <h2>Contactez-moi !</h2>
+                    <a href="mailto:nathalie_aymeric@hotmail.fr">
+                        <img src="./assets/Images/mail.png" alt="logo mail">
+                        nathalie_aymeric@hotmail.fr
+                    </a>
+                    <br>
+                    <a href="http://www.linkedin.com/in/nathalie-aymeric-bb963998"><img
+                                src="./assets/Images/link.png" alt="logo linkedin">linkedin</a>
+                </div>
+            </article>
+            <article>
+                <div class="logoFooter-container">
+                    <img src="./assets/Images/Logo-parcourant2.png" alt="logo du site " en parcourant le monde">
+                </div>
+            </article>
+        </div>
+    </footer>
+</body>
+
+</html>

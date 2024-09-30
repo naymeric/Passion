@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "karla";
+    src: url(../Fonts/Karla-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(../Fonts/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: poppins;
+}
+
+.navBar-container {
+    display: flex;
+    border: solid;
+    border: thin;
+    border: #edf5e1;
+    width: 100%;
+    background-color: #edf5e1;
+}
+
+
+.navBarLeft img {
+    width: 20%;
+    margin: 10px;
+    margin-bottom: 0%;
+    border: solid;
+    border-color: #edf5e1bb;
+    border-radius: 20px;
+}
+
+
+.navBarRight {
+    width: 80%;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    color: rgba(13, 195, 100, 0.87);
+    font-weight: 900;
+}
+
+.navList li {
+    position: relative;
+    /*il faut que position relative sot sur le parent des boutons ligne*/
+    margin-top: 70px;
+    border: solid thin;
+    border-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: rgba(225, 235, 226, 0.781);
+    text-align: center;
+}
+
+.navList a {
+    text-decoration: none;
+    color: rgba(13, 195, 100, 0.87);
+}
+
+.boutonColonne {
+    display: none;
+    /*pour cacher le sous menu quand on ne met pas la spuris dessus*/
+    list-style-type: none;
+    font-weight: 400;
+    position: absolute;
+    top: px;
+    /*supprimer poitionner le sous menu - l'enfant est en position absolue et le parent en position relative*/
+    z-index: 1;
+}
+
+/* PARTIE HOVER*/
+
+.boutonLigne a {
+
+
+    border: solid thin;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.boutonLigne:hover a {
+    background-color: green;
+    color: white;
+}
+
+
+
+/*pour que les boutons colonnes apparaissent quand on se positionne sur Destination*/
+.boutonLigne:hover .boutonColonne {
+    display: block;
+    background-color: white;
+    color: green;
+    padding: 20px;
+    margin: 0;
+}
+
+/*pour paramétrer le style des boutons colonnes*/
+.boutonLigne:hover .boutonColonne li a {
+    display: block;
+    background-color: white;
+    color: green;
+    border: none;
+    font-size: medium;
+
+}
+
+
+/*supprimer le padding et marging sur les li de boutonColonne*/
+.boutonLigne:hover .boutonColonne li {
+    padding: 0%;
+    margin: 0;
+}
+
+
+/* FIN DE LA PARTIE HOVER*/
+
+
+
+
+/* FIN DE LA PARTIE HEADER*/
