@@ -19,6 +19,9 @@ body {
     font-family: poppins;
 }
 
+/* PARTIE BARRE DE NAVIGATION*/
+
+
 .navBar-container {
     display: flex;
     border: solid;
@@ -70,21 +73,18 @@ body {
 
 .boutonColonne {
     display: none;
-    /*pour cacher le sous menu quand on ne met pas la spuris dessus*/
+    /*pour cacher le sous menu quand on ne met pas la souris dessus*/
     list-style-type: none;
     font-weight: 400;
     position: absolute;
-    top: px;
-    /*supprimer poitionner le sous menu - l'enfant est en position absolue et le parent en position relative*/
     z-index: 1;
 }
 
 /* PARTIE HOVER*/
 
 .boutonLigne a {
-
-
-    border: solid thin;
+    border: solid;
+    border: thin;
     border-radius: 15px;
     padding: 5px;
 }
@@ -100,6 +100,7 @@ body {
 .boutonLigne:hover .boutonColonne {
     display: block;
     background-color: white;
+    transform: translateY(5px) translateX(8px);
     color: green;
     padding: 20px;
     margin: 0;
@@ -127,5 +128,147 @@ body {
 
 
 
+/*******Bandeau d'images avec hover*******/
 
-/* FIN DE LA PARTIE HEADER*/
+.ecosse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(103 199 103 / 50%);
+    padding-bottom: 50px;
+}
+
+h2 {
+    letter-spacing: 5px;
+    color: rgba(52, 80, 65);
+    text-shadow: 2px -1px 8px rgba(52, 80, 65);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.sliderEcosse {
+    width: 600px;
+    overflow: hidden;
+    border: solid;
+    border-color: #edf5e1;
+    border-radius: 10px;
+}
+
+.carousselEcosse {
+    animation: slide 24s linear infinite 0s;
+    display: flex;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-1800px);
+    }
+}
+
+.parcours {
+    background-color: #edf5e1bb;
+    padding: 50px;
+    text-align: justify;
+}
+
+.parcours h2 {
+    text-align: center;
+}
+.parcours h3 {
+    margin-top: 30px;
+}
+.parcours h4 {
+    margin-top: 20px;    
+    margin-left: 30px;
+}
+
+.parcours p {
+    font-size: larger;
+}
+
+.parcours ul {
+    font-size: large;
+}
+
+.parcours li {
+    font-size: large;
+    list-style-type: none;
+    margin-left: 60px;
+}
+
+
+/* FOOTER*/
+
+.footBar img {
+    width: 10%;
+    margin: 10px;
+    margin-bottom: 0%;
+    border: solid;
+    border-color: #edf5e1bb;
+    border-radius: 20px;
+}
+
+footer {
+    background-color: #edf5e1;
+    border-top: 1px solid rgba(52, 80, 65);
+}
+
+footer h2 {
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: rgba(52, 80, 65);
+    text-shadow: 2px -1px 8px rgba(52, 80, 65);
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-bottom: 0;
+}
+
+.contactFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactFooter a {
+    text-decoration: none;
+    color: rgba(52, 80, 65);
+    margin-left: 50px;
+}
+
+.mail-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.mail-container img {
+    width: 20px;
+    padding-right: 5px;
+}
+
+
+.mail-container2 {
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+.logoFooter-container img {
+    border: solid;
+    border-color: white;
+    width: 100px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}

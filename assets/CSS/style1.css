@@ -53,7 +53,7 @@ body {
 
 .navList li {
     position: relative;
-    /*il faut que position relative sot sur le parent des boutons ligne*/
+    /*il faut que position relative soit sur le parent des boutons ligne*/
     margin-top: 70px;
     border: solid thin;
     border-color: white;
@@ -70,11 +70,10 @@ body {
 
 .boutonColonne {
     display: none;
-    /*pour cacher le sous menu quand on ne met pas la spuris dessus*/
+    /*pour cacher le sous menu quand on ne met pas la souris dessus*/
     list-style-type: none;
     font-weight: 400;
     position: absolute;
-    top: px;
     /*supprimer poitionner le sous menu - l'enfant est en position absolue et le parent en position relative*/
     z-index: 1;
 }
@@ -100,6 +99,7 @@ body {
 .boutonLigne:hover .boutonColonne {
     display: block;
     background-color: white;
+    transform: translateY(5px) translateX(8px);
     color: green;
     padding: 20px;
     margin: 0;
@@ -137,7 +137,6 @@ header {
 .backgroundImage {
     z-index: -1;
     background-image: url(../Images/landscape.jpg);
-    height: calc(100vh - 119px);
     background-size: cover;
     position: absolute;
     top: 0;
@@ -237,6 +236,7 @@ header {
     height: 300px;
     background-size: cover;
     font-size: xx-large;
+    transition:  0.3s ease;
 }
 
 .destArt-container h3 a {
@@ -261,12 +261,22 @@ header {
     margin-bottom: 100px;
 }
 
+.destArt-container article:hover h3{
+    transition:  0.3s ease;
+    border: solid;
+    border-color: orangered;
+}
+
+.destArt-container article a:hover {
+    text-decoration: none;
+    transform: scale(1.5);
+}
+.destArt-container article:hover p {
+    font-weight: bold;
+}
 
 /* FOOTER*/
 
-footer {
-    border-top: 1px solid black;
-}
 
 .footBar img {
     width: 10%;
@@ -278,12 +288,10 @@ footer {
 }
 
 
-
-/* FOOTER ACCUEIL*/
-
 footer {
     background-color: #edf5e1;
     border-top: 1px solid rgba(52, 80, 65);
+    position: relative;
 }
 
 footer h2 {
@@ -293,8 +301,8 @@ footer h2 {
     margin-left: 20px;
     color: rgba(52, 80, 65);
     text-shadow: 2px -1px 8px rgba(52, 80, 65);
-    padding-top: 50;
-    px padding-left: 30px;
+    padding-top: 50px;
+    padding-left: 30px;
 
 }
 
@@ -313,7 +321,8 @@ footer h2 {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
-    width: 50% margin-left: 10px;
+    width: 50%;
+    margin-left: 10px;
 }
 
 .mail-container img {
@@ -339,4 +348,40 @@ footer h2 {
     border-radius: 20px;
     margin-top: 10px;
     margin-right: 10px;
+}
+
+.van {
+    z-index: 1;  
+}
+
+.van img{
+    position: absolute;
+    filter: drop-shadow(0px 6px 3px rgb(53, 52, 52));
+    animation: van 15s infinite linear forwards;
+}
+
+/* La proriété left: calc(100% - 172px); sert à ce que 
+l'image (de 172 px de large) ne sorte pas de la page*/
+@keyframes van {
+    0% {
+        top: -85px;
+        left: 0%;
+        transform:scaleX(1);    
+    }
+    49% {
+        top: -85px;
+        left: calc(100% - 172px);
+        transform:scaleX(1);
+    }
+    50% {
+        top: -85px;
+        left: calc(100% - 172px);
+        transform:scaleX(-1);
+    }
+
+    100% {
+        top: -85px;
+        left: 0%;
+        transform:scaleX(-1);    
+    }
 }
